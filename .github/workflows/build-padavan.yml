@@ -2,11 +2,15 @@
 name: Build Padavan
 
 on: 
-  release:
-    types: [published]
-  push:
-    tags:
-    - 'v*'
+  repository_dispatch:
+  workflow_dispatch:
+  #schedule:
+    #- cron: 0 23 * * 5
+#  release:
+#    types: [published]
+#  push:
+#    tags:
+#    - 'v*'
   #  branches: 
   #    - master
 #  schedule:
